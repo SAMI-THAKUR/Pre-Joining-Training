@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- XML Declaration
+version="1.0"  -> XML Version
+encoding="UTF-8" -> Character Encoding
+-->
+
+<!-- Root Element
+XML must have exactly ONE root element.
+-->
+
+<college>
+    <!-- Elements (building blocks of an XML)
+    student, name, age are XML elements
+    -->
+    <student id="101" gender="Male">
+        <!-- Attributes (provide metadata) (can have multiple unique attributes)
+        id="101"
+        gender="Male"
+        -->
+        <!--XML Schema (XSD)
+            <xs:element name="age" type="xs:int"/>
+               Used to validate:
+                - Data Types
+                - Length
+                - Range
+                - Required Elements
+        -->
+        <name type="xs:string">Sami</name>
+        <age>22</age>
+        <branch>AI &amp; DS</branch>
+        <!-- Special Characters
+        &  -> &amp;
+        <  -> &lt;
+        >  -> &gt;
+        "  -> &quot;
+        '  -> &apos;
+        -->
+        <!-- Nested Elements: Address is inside Student. -->
+        <address>
+            <city>Mumbai</city>
+            <state>Maharashtra</state>
+            <country>India</country>
+        </address>
+        <!--Repeating Elements (similar to arrays in JSON)-->
+        <skills>
+            <skill>Java</skill>
+            <skill>Python</skill>
+            <skill>SQL</skill>
+        </skills>
+
+        <!-- CDATA (Character Data)
+            Characters between these two enclosures are interpreted as characters, and not as markup\
+        -->
+        <notes>
+            <![CDATA[
+                5<10
+                a && b
+]]>
+        </notes>
+    </student>
+    <!-- NameSpace (set of unique names)
+    element and attribute name can be assigned to a group
+    -->
+    <professor xmns:n = "prof">
+        <prof:name>Soemthing</prof:name>
+        <prof:dept>Something</prof:dept>
+    </professor>
+</college>
+
+<!--
+    XPath
+Query Language for XML
+/college/student/name
+Get all students:
+-->
