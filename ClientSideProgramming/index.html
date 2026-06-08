@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Login & Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h2>Login</h2>
+
+        <form id="loginForm">
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter Email" required />
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter Password" required />
+          </div>
+
+          <button type="submit">Login</button>
+        </form>
+      </div>
+
+      <!-- Registration Form -->
+      <div class="form-box">
+        <h2>Registration</h2>
+
+        <form id="registrationForm">
+          <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter Full Name" required />
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="Enter Email" required />
+          </div>
+
+          <div class="input-group">
+            <label>Password</label>
+            <input type="password" placeholder="Create Password" required />
+          </div>
+
+          <div class="input-group">
+            <label>Confirm Password</label>
+            <input type="password" placeholder="Confirm Password" required />
+          </div>
+
+          <div class="input-group">
+            <label>Gender</label><br />
+            <input type="radio" name="gender" /> Male <input type="radio" name="gender" /> Female
+          </div>
+
+          <div class="input-group">
+            <label>Department</label>
+            <select>
+              <option>CSE</option>
+              <option>IT</option>
+              <option>ECE</option>
+              <option>Mechanical</option>
+            </select>
+          </div>
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
