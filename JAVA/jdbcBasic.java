@@ -17,7 +17,7 @@ public class jdbcBasic {
 
         String url = "jdbc:mysql://127.0.0.1:3306/college";
         String userName = "root";
-        String password = "Sami@280708";
+        String password = "#####";
         try{
             Connection con = DriverManager.getConnection(url, userName, password);
             System.out.println("DB is connected");
